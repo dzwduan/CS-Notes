@@ -161,3 +161,7 @@ if [[ "$(hostname)" == "myServer" ]]; then {do_something}; fi
   - `cat .ssh/id_ed25519.pub | ssh foobar@remote 'cat >> ~/.ssh/authorized_keys'`
   - 支持 `ssh-copy-id`
     - `ssh-copy-id -i .ssh/id_ed25519.pub foobar@remote`
+    
+### ssh复制
+- `scp`
+- `rsync`
