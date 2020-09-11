@@ -1,8 +1,10 @@
 /style
 /node_modules
 book.json
+/.idea
 /.idea/modules.xml
 /.idea/misc.xml
 /.idea/gitbook.iml
 /.idea/vcs.xml
 /.idea/.gitignore
+*.xml
