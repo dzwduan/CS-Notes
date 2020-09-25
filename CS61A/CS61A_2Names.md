@@ -1,6 +1,4 @@
-# Names
-
-binds names to values
+# 绑定
 
 ```python
 def <name>(<formal parameters>): # 函数签名
