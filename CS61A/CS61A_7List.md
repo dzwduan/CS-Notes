@@ -1,5 +1,9 @@
 # List
 
+## list 的特性
+- 可以使用 + 将两个 list 相加
+- in 判断元素是否在 list
+- 成对出现的 list 可以用 for 循环提取
 ```python
 >>> [41,42,43,44]
 [41,42,43,44]
@@ -28,6 +32,7 @@ False
 
 ## range
 range 是连续数字的序列
+- 用_表示不关心序列里的值
 ```python
 >>> list(range(-2,2))
 [-2, -1, 0, 1]
@@ -41,6 +46,7 @@ Go bear!
 ```
 
 ## 列表推导 (List Comprehensions)
+- `[function(x) for x in list if boolean(x)]`
 ```python
 >>> odds = [1,3,5]
 >>> [x+1 for x in odds]
@@ -52,6 +58,8 @@ Go bear!
 ```
 
 ## 字符串 (Strings)
+
+
 ```python
 >>> city = 'Berkeley'
 >>> len(city)
