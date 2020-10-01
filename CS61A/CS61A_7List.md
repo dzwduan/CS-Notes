@@ -58,7 +58,10 @@ Go bear!
 ```
 
 ## 字符串 (Strings)
-
+字符串本身是字符的不可改变的 array
+- 可以用 `len(string)` 求的字符串数量
+- 可以用 `string[i]` 提取单个字符
+- 可以用 in 判断子字符是否在字符中
 
 ```python
 >>> city = 'Berkeley'
@@ -71,7 +74,8 @@ True
 ```
 
 ## 切片 (Slice)
-- slice 是创建出了新的 list
+slice 是创建出了一个新的 list
+
 ```python
 >>> odds = [1,3,5,7,9]
 >>> odds[1:3]
@@ -86,31 +90,30 @@ True
 
 ## 序列函数
 ### sum
-sum(iterable, start=0) -> value
-- 返回“开始”值(默认值:0)加上一个可迭代的数字，当可迭代为空时，返回开始值。
+`sum(iterable, start=0)` -> value
+- 返回的 value 是：`start` (默认值:0) 加上一个可迭代的数字，当可迭代为空时，返回开始值。
 
 ```python
 >>> sum([[2,3],[4]],[])  # 相当于 [] + [2,3] + [4]
 [2, 3, 4]
-
 ```
 
 ### max
-max(...)
-    max(iterable, , key=func) -> value
-    max(arg1, arg2, *args, *[, key=func]) -> value
+- `max(iterable, key=func)` -> value
+- `max(arg1, arg2, *args, *[, key=func])` -> value
+
 ```python
 >>> max(range(10),key = lambda x: 7-(x-4)*(x-2))  # y = 7-(x-4)*(x-2) 当 y 取最大值时， x是？
 3
 ```
 
 ### all & any
-all(iterable, /)
-    如果bool(x)对迭代中的**所有**x都为真，则返回真。
-    如果可迭代为空，则返回**True**。
-any(iterable, /)
-    如果bool(x)对迭代中的**有一个**x为真，则返回真。
-    如果可迭代为空，则返回**False**。
+`all(iterable, /)`
+- 如果 `bool(x)` 迭代中的**所有**x都为真，则返回真。
+- 如果可迭代为空，则返回**True**。
+`any(iterable, /)`
+- 如果 `\bool(x)` 迭代中的**一个**x为真，则返回真。
+- 如果可迭代为空，则返回**False**。
 
 ```python
 >>> all([2,4])
