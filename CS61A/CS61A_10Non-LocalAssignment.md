@@ -1,7 +1,9 @@
 # Non-Local Assignment
-在函数内部创建的变量，只在自己的 `Frame` 里。对于高阶函数，内部函数想要 引用/改变 `parent frame` 的变量值，则无法进行
-- `nonlocal` 声明变量使其绑定为 `parent frame` 的变量
-  
+在函数内部创建的变量，只在自己的 `Frame` 里使用。  
+使用高阶函数时，内部函数想要无法引用/改变 `parent frame` 的变量。
+
+解决方法：使用 `nonlocal` 声明变量使内部函数的变量绑定为 `parent frame` 的变量。
+
 ```python
 def make_withdraw(balance):
     "Return a withdraw function with a starting balance."
@@ -21,9 +23,9 @@ wtihdraw(60)
 ```
 ## Non-Local 细节
 
-- 将来对该 name 的赋值 将更改 其在绑定该 name 的当前环境中，第一个非本地框架(**first non-local framework**)中预先存在的绑定
-- 该 name 要已经被使用过了（已经存在）
-- 该 name 不能与 local scope 的 name 冲突
+对经过 `nonlocal` 声明过的 `name` 重新赋值，改变的是 `name` 的第一个非本地框架 (**first non-local framework**) 中预先存在的值
+- 该 `name` 要已经声明过
+- 该 `name` 不能与 `local scope` 的 `name` 冲突
 
 
 |状态(x=2)|影响|
@@ -37,9 +39,9 @@ wtihdraw(60)
 
 ## Python particulars(细节)
 
-- python 在执行方法内部前 -> 预先计算 每个 name 属于 哪个 frame
+python 在执行方法前，先求出 `name` 属于的 `frame`
 
-- 在 function 内部，单一 name 的所有实例必须指向同一个框架
+- 在 `function` 内部，单一 `name` 的所有实例必须指向同一个框架
 
   
 ```python
@@ -65,8 +67,8 @@ def make_withdraw(balance):
 
 ```
 
-## 其他可选的方法
-用可变值，如列表
+其他可选的方法：  
+用可变值，如列表。
 
 ```python
 def make_withdraw_list(balance):
@@ -80,7 +82,6 @@ def make_withdraw_list(balance):
 ```
 
 
-## 突变会导致 函数的引用透明性(referential transparency) 丢失
-- 函数的返回值只依赖于其输入值,这种特性就称为引用透明性
-- Mutation operations 违反了引用透明度的条件
-  - 因为它们不仅仅是返回一个值，而是改变了环境
+## 突变会导致 函数的引用透明性 (referential transparency) 丢失
+返回值只依赖于输入值，这种特性称为引用透明性。  
+`Mutation operations` 违反引用透明度，因为它们改变了环境。
