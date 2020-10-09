@@ -1,10 +1,10 @@
 # Table
 ## Joining Tables
-- 通过将多张表连接成一张表来组合数据，这是数据库系统中的基本操作。
+通过将多张表连接成一张表来组合数据，这是数据库系统中的基本操作。
 
-- 我们在本类中只重点介绍一种方法（内部连接）。
+我们在本类中只重点介绍一种方法（内部连接）。
 
-- 如果连接两个表，左边的表有 m 条记录，右边的表有 n 条记录，那么连接后的表将有 mn 条记录
+如果连接两个表，左边的表有 m 条记录，右边的表有 n 条记录，那么连接后的表将有 mn 条记录
 
   
 ```SQLite
@@ -23,13 +23,10 @@ CREATE TABLE parents AS
  SELECT "abraham"          , "clinton"         UNION
  ...;
 ```
-
-
-- 两张表 A和B 用逗号连接，得出 A和B中某行 的所有组合。
+两张表 A 和 B 用逗号连接，得出 A 和 B 中某行 的所有组合。
   
-  - Select the parents of curly-furred dogs
-  
-    
+Select the parents of curly-furred dogs
+
 ```SQLite
 SELECT parent FROM parents, dog WHERE child = name AND fur = "curly";
 ```
@@ -59,7 +56,7 @@ SELECT a.child AS first, b.child AS second
 ```
 
 ## Numerical Expressions
-- 表达式可以包含函数调用和算术运算符
+表达式可以包含函数调用和算术运算符
 - `SELECT [columns] FROM [table] WHERE [expression] ORDER BY [expression];`
 - Combine values: ` +, -, *, /, %, and, or `
 - Transform values: ` abs, round, not, -`
