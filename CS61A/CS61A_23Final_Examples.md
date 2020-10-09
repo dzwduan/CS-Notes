@@ -1,6 +1,6 @@
 # Final Examples
 
-- 两个常用的递归模板
+两个常用的递归模板
   - return the accumulation(累计) so far，用递归函数的 return 值来跟踪你想要的返回值
   - 初始化某个 accumulation 为 0 或 空列表， 然后按需要填充
 
