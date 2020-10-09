@@ -18,11 +18,8 @@ Unix操作系统（及变种如Linux, Mac OS 10）的基本特征。
 
 ## python programs in a Unix environment
 - `sys.stdin` 和 `sys.stdout` 的值提供了对Unix标准流文件的访问
-
 - 一个Python文件有一个支持`iteration, read, write`方法的接口。
-
 - 使用这些 "`files`"可以利用操作系统的文本处理抽象
-
 - `input` 和 `print` 功能还可以从`standard input`读取和写入`standard output`。 
 
   
@@ -135,5 +132,4 @@ def vowels(line):
 >>> data.flatMap(vowels).reduceByKey(add).collect()
 [('i', 189626), ('a', 233881), ('u', 110820),('o', 272697), ('e', 387705)]
 ```
-
-​    
+  
