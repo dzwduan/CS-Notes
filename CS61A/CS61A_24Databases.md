@@ -2,7 +2,8 @@
 ## Create Table
 ![CreateTable](imgs/CreateTable.png)
 
-- 我们忽略一些细节后的精简版本
+我们忽略一些细节后的精简版本
+
 ![CreateTableDemo](imgs/CreateTableDemo.png)
 
 例子：
@@ -14,7 +15,8 @@ CREATE TABLE numbers (n, note DEFAULT "No comment");
 
 ## Drop Table
 ![drop table](imgs/DropTable.png)
-- 使用` if exists `如果不存在会 报错
+
+使用` if exists `如果不存在会 报错
 
 ## Modifying Tables
 ### Insert
@@ -87,6 +89,7 @@ sqilte> select * from primes;
 ```
 
 ## Python and SQL
+
 ```python
 import sqlite3
 
@@ -124,7 +127,9 @@ INSERT INTO Students VALUES ('Robert''); DROP TABLE Students; --');
 多个程序可能同时连接到同一数据库，可能从同一 table 上插入值或者读取值。
 - 数据库可以处理同一数据库进行多个连接、多个客户端改变同一个 table 的情况
 
+
 例子: 21点游戏， `python` 程序连接数据库来执行游戏， `eval-print-loop` 也连接数据库来看牌
+
 ```python
 # Blackjack
 
