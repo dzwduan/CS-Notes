@@ -37,7 +37,7 @@
 
 - [CSAPP - Notes](CSAPP) □□□□□□□□□□
 
--  [Ucore - Notes](ucore) □□□□□□□□□□
+- [Ucore - Notes](ucore) □□□□□□□□□□
 
   
 ### 计算机网络
